@@ -1,0 +1,21 @@
+autopublish/
+│
+├── admin/
+│   ├── AdminMenu.php
+│   ├── UploadPageController.php 
+│   ├── assets/
+│   │   └── admin.js
+│
+├── domain/
+│   ├── HtmlImporter.php          
+│
+├── bootstrap/
+│   |
+|   └── admin.php
+├── infrastructure/       
+│   └── logging/
+│       └── Logger.php
+│
+├── views/
+│   └── upload-page.php         
+└── autopublish.php              
