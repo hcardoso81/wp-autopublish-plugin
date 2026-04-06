@@ -2,8 +2,8 @@
 /**
  * Plugin Name: AutoPublish
  * Plugin URI:  https://github.com/your-user/wp-autopublish-plugin
- * Description: Import HTML files and create draft WordPress posts automatically.
- * Version:     0.1.0
+ * Description: Import Google Docs and automatically create draft WordPress posts with images.
+ * Version:     0.2.0
  * Author:      Cardoso Hernan
  * Author URI:  https://www.linkedin.com/in/cardosohernan/
  * Text Domain: autopublish

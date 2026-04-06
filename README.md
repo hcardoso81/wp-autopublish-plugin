@@ -1,21 +1,29 @@
 # WP AutoPublish Plugin
 
-WordPress plugin that allows uploading HTML files and automatically creating draft posts from them.
+WordPress plugin that allows importing content from Google Docs and automatically creating draft posts.
 
-## 🚀 Features (POC v1)
+## 🚀 Features (POC v2)
 
-- Upload HTML file from WordPress admin
-- Automatically create a draft post
-- Insert raw HTML as post content
+- Import content directly from a Google Docs URL
+- Automatically fetch and convert document to HTML
+- Download and upload images to WordPress Media Library
+- Replace external image URLs with local WordPress URLs
+- Create draft posts automatically
 
 ## 🧱 Architecture
 
 The plugin follows a clean architecture approach:
 
 - `admin/` → WordPress admin UI and controllers
-- `domain/` → Business logic (HTML processing, import logic)
-- `views/` → Shared views
-- `bootstrap/` → Plugin initialization
+- `domain/` → Business logic (importers, processors)
+- `infrastructure/` → Logging and external integrations
+- `views/` → UI templates
+- `bootstrap/` → Plugin initialization and wiring
+
+### Main Components
+
+- `GoogleDocFetcher` → Fetches HTML from Google Docs
+- `HtmlImporter` → Processes HTML and creates WordPress posts
 
 ## 📦 Installation
 
@@ -25,17 +33,26 @@ The plugin follows a clean architecture approach:
 
 ## 🧪 Usage
 
-1. Upload an `.html` file
-2. Click "Upload and create draft"
-3. Edit the generated post
+1. Open a Google Docs document
+2. Make sure it is publicly accessible ("Anyone with the link")
+3. Copy the document URL
+4. Paste it into the plugin input
+5. Click **Import and create draft**
+6. Edit the generated post in WordPress
+
+## ⚠️ Requirements
+
+- Google Docs document must be publicly accessible
+- WordPress must allow outbound HTTP requests (`wp_remote_get`)
 
 ## 🔜 Roadmap
 
-- [ ] Support for images upload and processing
-- [ ] Replace image URLs with WordPress media library URLs
-- [ ] Extract metadata (title, excerpt)
+- [ ] HTML cleanup (remove inline styles and unnecessary tags)
+- [ ] Convert content to Gutenberg blocks
+- [ ] Extract metadata (title, excerpt, featured image)
+- [ ] Category and tag automation
 - [ ] Mailchimp integration
-- [ ] HTML sanitization and validation
+- [ ] Multiple document import (batch)
 
 ## ⚠️ Notes
 

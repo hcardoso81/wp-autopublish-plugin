@@ -8,14 +8,17 @@ autopublish/
 │
 ├── domain/
 │   ├── HtmlImporter.php          
-│
+│   └── GoogleDocFetcher.php
+|
 ├── bootstrap/
-│   |
+│   | 
 |   └── admin.php
+| 
 ├── infrastructure/       
 │   └── logging/
 │       └── Logger.php
 │
 ├── views/
 │   └── upload-page.php         
+|
 └── autopublish.php              
